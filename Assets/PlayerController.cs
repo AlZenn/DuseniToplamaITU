@@ -7,6 +7,7 @@
 
     public class PlayerController : MonoBehaviour
     {
+    public GameObject player1, spawnerp1;
         public int score = 0;
         public Text scoreText;
         public GameObject gameOverPanel;
@@ -35,8 +36,8 @@
             if (other.gameObject.CompareTag("bad"))
             {
                 Destroy(other.gameObject);
-                Time.timeScale = 0f;
-                gameOverPanel.SetActive(true);
+            player1.SetActive(false);
+            spawnerp1.SetActive(false);
             }
         }
 
